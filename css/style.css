@@ -1,0 +1,509 @@
+/* AI Tool Usage Declaration:
+ * 1. Layout and Design:
+ *    - Grid layout suggestions from Claude AI
+ *    - Color scheme optimization from Copilot
+ * 2. Animations and Effects:
+ *    - Image mask effect from Copilot
+ * 3. Code Integration:
+ *    - Code structure optimized with AI assistance
+ *    - All content and core functionality written by myself
+ */
+
+/* ====== Design Philosophy ====== */
+/*
+ * Color Scheme:
+ * - Primary Colors: Black (#000) and Yellow (#ffec1c) contrast
+ * - Purpose: Create strong visual impact while maintaining professionalism
+ *
+ * Layout Strategy:
+ * - Grid layout for responsive design
+ * - Large block divisions for better readability
+ * - Use of white space to create hierarchy
+ */
+
+/* ====== Font declaration area ====== */
+@font-face {
+    font-family: 'SpecialElite';
+    src: url('../Font/SpecialElite-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Monoton';
+    src: url('../Font/Monoton-Regular.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Edu AU VIC WA NT Pre';
+    src: url('../Font/EduAUVICWANTPre-VariableFont_wght.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+
+
+
+
+
+/* ====== Global Basic Styles (Basic Appearance) ====== */
+body {
+    font-family: sans-serif;
+    background-color: #000;
+    margin: 0;
+}
+
+/* ====== Navigation Bar Related Styles ====== */
+nav {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    background-color: #ffec1c;
+    padding: 1rem 2rem;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav .logo {
+    font-size: 30px;
+    font-family: 'Edu AU VIC WA NT Pre', serif;
+    font-weight: 900;
+    font-optical-sizing: auto;
+    background-color: #000;
+    color: #fff;
+    padding: 0.8rem 2rem 1rem;
+    border-radius: 30px;
+    text-align: center;
+}
+
+nav .logo i {
+    margin: 0 2px;
+    font-size: 1em;
+    vertical-align: middle;
+}
+
+/* Email icon style */
+.email-link {
+    font-size: 2.0em;
+    color: #000;
+    margin-right: 1rem;
+    transition: transform 0.3s ease;
+}
+
+
+/* ====== Navigation Bar Hover Effect ====== */
+/* Navigation Bar Logo Hover Effect */
+nav .logo:hover {
+    background-color: #000;
+    color: #ffec1c;
+    transform: scale(1.1);
+}
+/* GitHub icon style */
+nav .fab.fa-github {
+    font-size: 2.0em;
+    transition: transform 0.3s ease;
+}
+/* GitHub icon hover effect */
+nav .fab.fa-github:hover {
+    transform: scale(1.5);
+}
+
+/* Instagram icon style */
+nav .fab.fa-instagram {
+    font-size: 2.0em;
+    transition: transform 0.3s ease;
+}
+/* Instagram icon hover effect */
+nav .fab.fa-instagram:hover {
+    transform: scale(1.5);
+}
+
+/* Mail icon Hover fruit */
+.email-link:hover {
+    transform: scale(1.5);
+}
+
+
+/* ====== search box related styles ====== */
+/* Search box container */
+.search-container {
+    margin-left: 1rem;
+}
+/* Search box style */
+.search-box {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 236, 28, 0.8);
+    width: 200px;
+    font-size: 14px;
+    box-shadow:
+        inset 0 2px 6px rgba(0, 0, 0, 0.1),
+        inset 0 1px 2px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: text;
+}
+/* Search box focus status */
+.search-box:focus {
+    outline: none;
+    background-color: rgba(255, 236, 28, 0.95);
+    box-shadow:
+        inset 0 2px 4px rgba(0, 0, 0, 0.15),
+        inset 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+/* Search box hover effect */
+.search-box:hover {
+   transform: scale(1.1);
+}
+/* Search box placeholder text style */
+.search-box::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+/* ====== Home Page Area Styles ====== */
+.header-section {
+    background-color: #ffec1c;
+    text-align: center;
+    padding: 3rem;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.center-content {
+    max-width: 800px;
+}
+
+.center-content h1 {
+    font-family: 'SpecialElite', Arial, sans-serif;
+    font-size: 80px;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.header-content i {
+    font-size: 2rem;
+}
+
+.header-section h1 {
+    font-weight: bold;
+}
+
+.header-section p {
+    margin-top: 0.5rem;
+}
+
+.sheep-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 0.85em;
+    height: 0.85em;
+    vertical-align: middle;
+    transform: translateY(-10%);
+    margin: 0 0.05em;
+    transform-origin: center;
+}
+
+.sheep-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* This animation effect source code comes from the AI tool: Copilot generation results, optimization modification effect for the myself */
+.sheep-icon:hover {
+    animation: rotate 1s ease infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translateY(-10%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-10%) rotate(360deg);
+    }
+}
+
+/* Introduction text style */
+.intro-text {
+    font-family: 'SpecialElite', Arial, sans-serif;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    font-size: 20px;
+    opacity: 0.8;
+    margin: 0;
+    max-width: 600px;
+    text-align: right;
+}
+
+/* Intro text - bracketed style */
+.intro-text span {
+    display: block;
+    margin-top: 5px;
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+/* Address text style */
+#my-address {
+    font-family: 'SpecialElite', Arial, sans-serif;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    font-size: 20px;
+    opacity: 0.8;
+    margin: 0;
+    max-width: 400px;
+    text-align: left;
+}
+
+/* Address second line text style */
+#my-address span {
+    font-family: 'SpecialElite', Arial, sans-serif;
+    display: block;
+    margin-top: 5px;
+    font-size: 15px;
+    opacity: 0.7;
+}
+/* Email link type */
+#my-address .email-link {
+    font-family: 'SpecialElite', Arial, sans-serif;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+/* Visited links */
+#my-address .email-link:visited {
+    color: #333;
+}
+
+/* Mouse hover state */
+#my-address .email-link:hover {
+    color: #ffec1c;
+    text-decoration: underline;
+    background-color: #000;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* ====== The main text area style is ====== */
+
+.main-text-section {
+    height: 80vh;
+    background-color: #000000;
+    text-align: center;
+    color: #fff;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-text-section h2 {
+    font-family: 'SpecialElite', Arial, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.main-text-section h3 {
+    font-family: 'SpecialElite', Arial, sans-serif;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+/* Header container style */
+.main-text-section .big-title {
+    position: relative;
+    font-family: 'SpecialElite', Arial, sans-serif;
+    line-height: 1;
+    height: 120px;
+}
+
+/* Style of A */
+.large-letter {
+    font-size: 250px;
+    line-height: 1.3;
+    display: block;
+    margin-left: -108px;
+}
+
+/* about me text style */
+.small-text {
+    position: absolute;
+    top: 155%;
+    left: 50px;
+    font-size: 45px;
+    white-space: nowrap;
+}
+
+/* Text style for the personal introduction section */
+#my-name {
+    font-family: 'SpecialElite', Arial, sans-serif;
+    font-size: 55px;
+    margin-top: -60px;
+    text-align: right;
+}
+
+#my-name + h4,
+#my-name + h4 + h5,
+#my-name + h4 + h5 + h6,
+.h7-style {
+    text-align: right;
+    font-family: 'SpecialElite', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    margin-top: 30px;
+    position: relative;
+    z-index: 2;
+}
+.me-image {
+    /* The gradient mask for this image is from the AI tool copilot*/
+    position: absolute;
+    right: -50px;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    mask-image: linear-gradient(to left, 
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.7) 40%,
+        rgba(0,0,0,0) 100%
+    );
+    -webkit-mask-image: linear-gradient(to left, 
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.7) 40%,
+        rgba(0,0,0,0) 100%
+    );
+}
+
+
+/* ====== Footer Style ====== */
+.bottom-footer {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    font-size: 15px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Common style for all footer text */
+.bottom-footer p {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+}
+.bottom-footer .fa-copyright {
+    margin-right: 5px;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+
+/* ====== Back to Top Button Style ====== */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #ffec1c;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+/* State when the button is displayed (scroll triggered) */
+.back-to-top.show {
+    opacity: 0.7;
+}
+
+/* Hover status */
+.back-to-top.show:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+    background-color: #ffec1c;
+    color: #000;
+}
+
+/* Boston University link style */
+.bu-link {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+/* Access status of the class */
+.bu-link.visited {
+    color: #cb2026;
+}
+
+/* Mouse hover state */
+.bu-link:hover {
+    color: #ffec1c;
+    text-decoration: underline;
+}
+
+strong {
+    color: #ffec1c;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+

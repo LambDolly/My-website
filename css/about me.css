@@ -1,0 +1,110 @@
+/* AI Tool Usage Declaration:
+ * 1. Layout and Design:
+ *    - Grid layout suggestions from Claude AI
+ *    - Color scheme optimization from Copilot
+ * 2. Animations and Effects:
+ *    - Image mask effect from Copilot
+ * 3. Code Integration:
+ *    - Code structure optimized with AI assistance
+ *    - All content and core functionality written by myself
+ */
+
+/* ====== Design Philosophy ====== */
+/*
+ * Color Scheme:
+ * - Primary Colors: Black (#000) and Yellow (#ffec1c) contrast
+ * - Purpose: Create strong visual impact while maintaining professionalism
+ *
+ * Layout Strategy:
+ * - Grid layout for responsive design
+ * - Large block divisions for better readability
+ * - Use of white space to create hierarchy
+ */
+
+
+
+
+.gallery-section {
+    padding: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 18px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+.title {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    background-color: #000000;
+}
+
+.logo {
+    font-size: 24px;
+    text-decoration: none;
+    color: #ffec1c;
+}
+
+/* Add modal box style */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90vh;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #ffec1c;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
