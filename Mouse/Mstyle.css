@@ -1,0 +1,38 @@
+/* Important Notice!!! */
+/* ！Reference declaration! All mouse style code sources: https://codepen.io/fuzionix/pen/PoRWVRg */
+/* Modify part of the code for my own use */
+
+/* Hide default mouse pointer */
+* {
+  cursor: none !important;
+}
+
+/* Custom pointer base style */
+.curzr-arrow-pointer {
+  backface-visibility: hidden;
+  pointer-events: none;
+}
+
+/* Pointer SVG icon style */
+.curzr-arrow-pointer svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* SVG path rendering optimization */
+.curzr-arrow-pointer svg path {
+  shape-rendering: geometricPrecision;
+}
+
+/* Invert color when hovering */
+html:has(a:hover) .curzr-arrow-pointer .inner,
+html:has(button:hover) .curzr-arrow-pointer .inner,
+html:has([role="button"]:hover) .curzr-arrow-pointer .inner {
+  fill: #111920 !important;  /* Inner color changes to black */
+}
+
+html:has(a:hover) .curzr-arrow-pointer .outer,
+html:has(button:hover) .curzr-arrow-pointer .outer,
+html:has([role="button"]:hover) .curzr-arrow-pointer .outer {
+  fill: #FFFFFF !important;  /* Outer color changes to white */
+}
